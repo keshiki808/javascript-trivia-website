@@ -1,0 +1,51 @@
+h1{
+    font-size: 5em;
+    text-align: center;
+}
+.grid-wrapper{
+    display: grid;
+    gap: 20px 20px;
+    grid-template-columns: repeat(4, minmax(250px, auto));
+    grid-template-rows: repeat(3, minmax(250px, auto));
+}
+
+#welcome-prompt{
+    font-size: 2em;
+    text-align: center;
+}
+
+.grid-item{
+    padding: 10px, 10px;
+}
+
+.grid-item:nth-child(1){
+    
+}
+
+.grid-item:nth-child(2){
+    
+}
+
+.grid-item:nth-child(3){
+    
+}
+
+.grid-item:nth-child(4){
+
+}
+
+.grid-item:nth-child(5){
+
+}
+
+.grid-item:nth-child(6){
+
+}
+
+.grid-item:nth-child(7){
+
+}
+
+.grid-item:nth-child(8){   
+
+}
