@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script scr="trivia.js" async ></script>
     <title>Trivia</title>
 </head>
 <body>
@@ -23,22 +22,22 @@
         <form action="PLACEHOLDER"> 
             <p>Test question:</p>
             <label>
-                <input type = "radio" id = "a-radio" name = "a-selection" value = "a">
+                <input type = "radio" id = "a-radio" name = "options" value = "a">
                 <span class="a-text">Option 1</span>
             </label><br>
             <label>    
-                <input type = "radio" id = "b-radio" name = "b-selection" value = "b">
+                <input type = "radio" id = "b-radio" name = "options" value = "b">
                 <span class="b-text">Option 2</span>
             </label><br>
             <label>
-                <input type = "radio" id = "c-radio" name = "c-selection" value = "c">
+                <input type = "radio" id = "c-radio" name = "options" value = "c">
                 <span class="c-text">Option 3</span>
             </label><br>
             <label>
-                <input type = "radio" id = "d-radio" name = "d-selection" value = "d">
+                <input type = "radio" id = "d-radio" name = "options" value = "d">
                 <span class="d-text">Option 4</span>
             </label><br>
-            <input type="submit" value="Submit">
+            <input type="button"  id = "submit-button" value="Submit">
 
         </form>
 
@@ -63,6 +62,6 @@
 
     </div>
 
-    
+    <script src="trivia.js" async></script>
 </body>
 </html>
