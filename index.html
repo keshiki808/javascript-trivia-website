@@ -10,58 +10,47 @@
 <body>
     <div id = "grid-wrapper">
     
-    <div id = "grid-top-item1">
-        <!-- Top header item -->
-        <h1>Trivia</h1>
-        <p id = "welcome-prompt">Welcome to the game!</p>
-    </div>
-    <div id = "grid-body-item2">
-        <!-- Multiple choice question item -->
-        <p>Test1</p>
-        <!-- NEED TO UPDATE ACTION WHEN READY -->
-        <form action="PLACEHOLDER"> 
-            <p>Test question:</p>
-            <label>
-                <input type = "radio" id = "a-radio" name = "options" value = "a">
-                <span class="a-text">Option 1</span>
-            </label><br>
-            <label>    
-                <input type = "radio" id = "b-radio" name = "options" value = "b">
-                <span class="b-text">Option 2</span>
-            </label><br>
-            <label>
-                <input type = "radio" id = "c-radio" name = "options" value = "c">
-                <span class="c-text">Option 3</span>
-            </label><br>
-            <label>
-                <input type = "radio" id = "d-radio" name = "options" value = "d">
-                <span class="d-text">Option 4</span>
-            </label><br>
-            <input type="button"  id = "submit-button" value="Submit">
+        <div id = "grid-top-item1">
+            <!-- Top header item -->
+            <h1>Trivia</h1>
+            <p id = "welcome-prompt">Welcome to the game!</p>
+        </div>
+        <div id = "grid-body-item2">
+            <!-- Multiple choice question item -->
+            <p>Test1</p>
+            <!-- NEED TO UPDATE ACTION WHEN READY -->
+            <form action="PLACEHOLDER"> 
+                <p>Test question:</p>
+                <label>
+                    <input type = "radio" id = "a-radio" class = "radio" name = "options" value = "a">
+                    <span id = "a-text"class = "question-label">Option 1</span>
+                </label><br>
+                <label>    
+                    <input type = "radio" id = "b-radio" class = "radio"name = "options" value = "b">
+                    <span id ="b-text" class = "question-label">Option 2</span>
+                </label><br>
+                <label>
+                    <input type = "radio" id = "c-radio" class = "radio"name = "options" value = "c">
+                    <span id ="c-text" class = "question-label">Option 3</span>
+                </label><br>
+                <label>
+                    <input type = "radio" id = "d-radio" class = "radio"name = "options" value = "d">
+                    <span id ="d-text" class = "question-label">Option 4</span>
+                </label><br>
+                <input type="button"  id = "submit-button" value="Submit">
+            </form>
+        </div>
+        <div id = "grid-footer-item3">
+            <p>Test2</p>
+            <!-- Body of page -->
+        </div>
 
-        </form>
-
-
-
-
-    </div>
-    <div id = "grid-footer-item3">
-        <p>Test2</p>
-        <!-- Body of page -->
-
-    </div>
-
-    <div id = "grid-side-item4">
-        <p>Test3</p>
-        <!-- Sidebar item 1 -->
-
+        <div id = "grid-side-item4">
+            <p>Test3</p>
+            <!-- Sidebar item 1 -->
+        </div>
     </div>
 
-
-
-
-    </div>
-
-    <script src="trivia.js" async></script>
+    <script src="trivia.js"></script>
 </body>
 </html>

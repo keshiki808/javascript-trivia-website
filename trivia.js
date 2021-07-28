@@ -1,26 +1,21 @@
-"use strict"
 const $ = (selector) => document.querySelector(selector);
 
-const aChoice = $('.a-text');
+// constants for multiple choice text(labels) and answers(radio button selection)
+const aChoice = $('#a-text');
 const aAnswer = $('#a-radio');
-console.log(aChoice);
 
-const bChoice = $('.b-text');
+const bChoice = $('#b-text');
 const bAnswer = $('#b-radio');
 
-const cChoice = $('.c-text');
+const cChoice = $('#c-text');
 const cAnswer = $('#c-radio');
 
-const dChoice = $('.d-text');
+const dChoice = $('#d-text');
 const dAnswer = $('#d-radio');
-console.log(dAnswer);
 
-const questions = [['This is a test question', 'Wrong answer1', 'Wrong answer2', 'Wrong answer3', 'Correct Answer', dAnswer]];
 
-aChoice.textContent = questions[0][1];
-bChoice.textContent = questions[0][2];
-cChoice.textContent = questions[0][3];
-dChoice.textContent = questions[0][4];
+const questions = [['This is a test question', 'Wrong answer1', 'Wrong answer2', 'Wrong answer3', 'Correct Answer', dAnswer],
+  ['This is a test question', 'Wrong answerTest1', 'Wrong answerTest2', 'Wrong answerTest3', 'Correct AnswerTest2', dAnswer]];
 
 const answerCheck = (correctAnswer) => {
   console.log('Button works');
@@ -33,9 +28,28 @@ const answerCheck = (correctAnswer) => {
   }
 };
 
+const questionFormatter = (question) => {
+  aChoice.textContent = question[1];
+  bChoice.textContent = question[2];
+  cChoice.textContent = question[3];
+  dChoice.textContent = question[4];
+};
+
+const questionPicker = () => {
+  const question = questions[Math.floor((Math.random()) * questions.length)];
+  const questionIndex = questions.indexOf(question);
+  if (questionIndex > -1) {
+    questions.splice(questionIndex, 1);
+    return question;
+  }
+};
+
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('Event added');
+  let question = questionPicker();
+  questionFormatter(question);
   $('#submit-button').addEventListener('click', () => {
-    answerCheck(dAnswer);
+    answerCheck(question[5]);
+    question = questionPicker();
+    questionFormatter(question);
   });
 });

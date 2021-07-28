@@ -44,3 +44,30 @@ h1{
     grid-column: 3/5;
 
 }
+
+.radio{
+    padding: 20em;
+    
+}
+
+label{
+    display: block;
+    padding: 15px;
+    font-size: 2em;
+  
+}
+
+span{
+    cursor: pointer;
+}
+
+form{
+}
+
+input[type=radio] {
+    transform: scale(2);
+}
+
+
+
+
