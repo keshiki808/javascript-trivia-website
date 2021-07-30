@@ -35,14 +35,25 @@ const questionFormatter = (question) => {
   dChoice.textContent = question[4];
 };
 
-const questionPicker = () => {
-  const question = questions[Math.floor((Math.random()) * questions.length)];
-  const questionIndex = questions.indexOf(question);
-  if (questionIndex > -1) {
-    questions.splice(questionIndex, 1);
-    return question;
+const questionPicker = (questionIndex) => {
+  // const question = questions[Math.floor((Math.random()) * questions.length)];
+  // const questionIndex = questions.indexOf(question);
+  // if (questionIndex > -1) {
+  //   questions.splice(questionIndex, 1);
+  //   return question;
+
   }
 };
+
+const questionRandomizer = () => {
+  // fisher-yates algorithm 
+  for(let i = questions.length — 1; i > 0; i--){
+    const j = Math.floor(Math.random() * i)
+    const temp = array[i]
+    array[i] = array[j]
+    array[j] = temp
+  }
+}
 
 document.addEventListener('DOMContentLoaded', () => {
   let question = questionPicker();
