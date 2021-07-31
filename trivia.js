@@ -15,9 +15,18 @@ const dAnswer = $('#d-radio');
 
 const questionPic = $('#question-pic');
 
+const questionPrompt = $("#question-prompt");
+
 
 const questions = [['This is a test question', 'Wrong answer1', 'Wrong answer2', 'Wrong answer3', 'Correct Answer', dAnswer,"images/questionmark1.png"],
-['This is a test question', 'Wrong answerTest1', 'Wrong answerTest2', 'Wrong answerTest3', 'Correct AnswerTest2', dAnswer,"images/questionmark2.png"]];
+['This is a test question2', 'Wrong answerTest1', 'Wrong answerTest2', 'Wrong answerTest3', 'Correct AnswerTest2', dAnswer,"images/questionmark2.png"],
+["Which movie did Nicolas Cage win an Academy award for best actor?", "Con-Air", "The Rock", "Leaving Las Vegas", "Ghost Rider", cAnswer,"images/questionmark1.png"],
+["What was the name of Nicolas Cage's character in the critically acclaimed action movie, Face/Off?", "Sean Archer", "Castor Troy", "Johnny Blaze", "Dash Jones", bAnswer, "images/faceoff.jpg"],
+["What was the treasure they wanted to steal in the movie 'National Treasure'?", "The Declaration of Independence", "The Mona Lisa", "The Florentine Diamond",  "Nazi Gold", aAnswer, "images/questionmark1.png"],
+["Which of the following Nicolas Cage movies was directed by legendary director David Lynch?", "Wild at Heart", "Vampire's Kiss", "Raising Arizona", "Con-Air", aAnswer, "images/questionmark1.png" ],
+["The was the goal of the big scheme in the movie 'Gone in Sixty Seconds'?", "Stealing a series of cars", "Completing a series of bank heists", "Stealing a treasure of gold bars", "Stealing a exotic paintings", aAnswer, "images/questionmark1.png"]]
+
+
 
 
 
@@ -33,6 +42,7 @@ const answerCheck = (correctAnswer) => {
 };
 
 const questionFormatter = (question) => {
+  questionPrompt.textContent = question[0];
   aChoice.textContent = question[1];
   bChoice.textContent = question[2];
   cChoice.textContent = question[3];

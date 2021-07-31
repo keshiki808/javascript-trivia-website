@@ -5,8 +5,10 @@ h1{
 #grid-wrapper{
     display: grid;
     gap: 20px 20px;
-    grid-template-columns: repeat(4, minmax(250px, auto));
-    grid-template-rows: repeat(3, minmax(250px, auto));
+    /* grid-template-columns: repeat(4, minmax(250px, auto));
+    grid-template-rows: repeat(3, minmax(250px, auto)); */
+    grid-template-columns: repeat(4, minmax(min(10rem, 100%), 1fr));
+    grid-template-rows: repeat(3, minmax(min(10rem, 100%), 1fr));
 }
 
 #welcome-prompt{
@@ -47,26 +49,103 @@ h1{
 
 .radio{
     padding: 20em;
-    
+    width: 1.25rem;
+    height: 1.25rem;
+
+   
 }
+.radio:hover{
+   
+}
+
 
 label{
     display: block;
-    padding: 15px;
     font-size: 2em;
-  
+    margin-left: 50px;
+    align-items: center;
+    padding: 1.25rem 0;
+    color: green;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+
+
 }
 
-span{
-    cursor: pointer;
+label:hover{
+
 }
+
+.question-label:hover{
+    cursor: pointer;
+    transition: 150ms all ease-in-out;
+    /* transform: scale(1.10); */
+    font-size: 125%;
+}
+
 
 form{
+    /* text-align: center; */
+    margin-left: 50px;
 }
 
 input[type=radio] {
     transform: scale(2);
+    margin-right: 25px;
 }
+
+#question-prompt{
+    font-size: 2em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight:900;
+}
+
+input{
+     display:inline-block;
+     text-align:center;
+     border-radius:0.12em;
+     color:black;
+     border-color: #000000;
+     padding:1.00em 1.2em;
+     border:0.1em solid #FFFFFF;
+     margin:0 0.5em 0.5em 0;
+     box-sizing: border-box;
+     font-family: 'Oswald', sans-serif;
+     font-size: 1.15em;
+     transition: all 0.3s;
+
+
+}
+input:hover{
+     color:#000000;
+     background-color:#FFFFFF;
+}
+
+#submit-button{
+    margin-right: 25px;
+}
+
+#question-pic{
+    /* width: 600px; */
+    height: 800px;
+    max-width: 1200px;
+
+    animation-name: float;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    /* margin-left: 30px;
+    margin-top: 5px; */
+
+
+}
+
+@keyframes float {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 10px); }
+    100%   { transform: translate(0, 0px); }   
+}
+
 
 
 

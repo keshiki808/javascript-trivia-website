@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&display=swap" rel="stylesheet">
     <title>Trivia</title>
 </head>
 <body>
@@ -20,7 +23,7 @@
             <p>Test1</p>
             <!-- NEED TO UPDATE ACTION WHEN READY -->
             <form action="PLACEHOLDER"> 
-                <p>Test question:</p>
+                <p id = "question-prompt">Test question1111111111111 1111111111111111111111111111111 111111111111111111111111 111111111111111111111111 1111111111111111111 11111111111111111111111111111111111111111111:</p>
                 <label>
                     <input type = "radio" id = "a-radio" class = "radio" name = "options" value = "a">
                     <span id = "a-text"class = "question-label">Option 1</span>
@@ -38,6 +41,7 @@
                     <span id ="d-text" class = "question-label">Option 4</span>
                 </label><br>
                 <input type="button"  id = "submit-button" value="Submit">
+                <input type="button"  id = "next-button" value="Next Question">
             </form>
         </div>
         <div id = "grid-footer-item3">
