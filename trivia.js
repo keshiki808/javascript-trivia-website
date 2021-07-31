@@ -13,9 +13,13 @@ const cAnswer = $('#c-radio');
 const dChoice = $('#d-text');
 const dAnswer = $('#d-radio');
 
+const questionPic = $('#question-pic');
 
-const questions = [['This is a test question', 'Wrong answer1', 'Wrong answer2', 'Wrong answer3', 'Correct Answer', dAnswer],
-  ['This is a test question', 'Wrong answerTest1', 'Wrong answerTest2', 'Wrong answerTest3', 'Correct AnswerTest2', dAnswer]];
+
+const questions = [['This is a test question', 'Wrong answer1', 'Wrong answer2', 'Wrong answer3', 'Correct Answer', dAnswer,"images/questionmark1.png"],
+['This is a test question', 'Wrong answerTest1', 'Wrong answerTest2', 'Wrong answerTest3', 'Correct AnswerTest2', dAnswer,"images/questionmark2.png"]];
+
+
 
 const answerCheck = (correctAnswer) => {
   console.log('Button works');
@@ -33,27 +37,28 @@ const questionFormatter = (question) => {
   bChoice.textContent = question[2];
   cChoice.textContent = question[3];
   dChoice.textContent = question[4];
+  questionPic.src = question[6];
+
 };
 
-const questionPicker = (questionIndex) => {
-  // const question = questions[Math.floor((Math.random()) * questions.length)];
-  // const questionIndex = questions.indexOf(question);
-  // if (questionIndex > -1) {
-  //   questions.splice(questionIndex, 1);
-  //   return question;
-
-  }
+const questionPicker = () => {
+  const question = questions[Math.floor((Math.random()) * questions.length)];
+  const questionIndex = questions.indexOf(question);
+  if (questionIndex > -1) {
+    questions.splice(questionIndex, 1);
+    return question;
+  };
 };
 
-const questionRandomizer = () => {
-  // fisher-yates algorithm 
-  for(let i = questions.length — 1; i > 0; i--){
-    const j = Math.floor(Math.random() * i)
-    const temp = array[i]
-    array[i] = array[j]
-    array[j] = temp
-  }
-}
+// const questionRandomizer = () => {
+//   // fisher-yates algorithm 
+//   for(let i = questions.length — 1; i > 0; i--){
+//     const j = Math.floor(Math.random() * i)
+//     const temp = array[i]
+//     array[i] = array[j]
+//     array[j] = temp
+//   }
+// }
 
 document.addEventListener('DOMContentLoaded', () => {
   let question = questionPicker();
