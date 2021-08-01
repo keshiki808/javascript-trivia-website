@@ -18,7 +18,7 @@ const questionPic = $('#question-pic');
 const questionPrompt = $("#question-prompt");
 
 const questionSetGenerator = () => {
-  return new Array([
+  return new Array(
 ["Which movie did Nicolas Cage win an Academy award for best actor?", "Con-Air", "The Rock", "Leaving Las Vegas", "Ghost Rider", cAnswer,"images/academyaward.jpg"],
 ["What was the name of Nicolas Cage's character in the critically acclaimed action movie, Face/Off?", "Sean Archer", "Castor Troy", "Johnny Blaze", "Dash Jones", bAnswer, "images/faceoff.jpg"],
 ["What was the treasure they wanted to steal in the movie 'National Treasure'?", "The Declaration of Independence", "The Mona Lisa", "The Florentine Diamond",  "Nazi Gold", aAnswer, "images/nationaltreasure.jpg"],
@@ -29,7 +29,7 @@ const questionSetGenerator = () => {
 ["Which famous Hollywood director is Nicolas Cage's uncle?", "George Lucas", "Francis Ford Coppola", "David Cronenberg", "Mel Brooks", bAnswer, "images/vampireskiss.jpg"],
 ["Why did they want to break into Alcatraz in the 90's action flick 'The Rock'?","To rescue a captured scientist","To rescue the President of The United States", "To stop a chemical weapon attack", "To find a hidden treasure", cAnswer, "images/therock.jpg"],
 ["What movie does Cage say his much meme'd line 'Not the bees!!'?", "The Fly", "The Wickerman", "Snake Eyes", "The Rock", bAnswer, "images/bees.png"],
-["In what critically acclaimed movie does Nicolas Cage play quirky twin brother screenwriters?", "Snake Eyes", "Matchstick Men", "8mm", "Adaptation", dAnswer, "images/twins.jpg"]])
+["In what critically acclaimed movie does Nicolas Cage play quirky twin brother screenwriters?", "Snake Eyes", "Matchstick Men", "8mm", "Adaptation", dAnswer, "images/twins.jpg"])
   }
 
 let questions = questionSetGenerator();
