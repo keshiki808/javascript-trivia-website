@@ -19,11 +19,12 @@
             <p id = "welcome-prompt">Welcome to the game!</p>
         </div>
         <div id = "grid-body-item2">
-            <!-- Multiple choice question item -->
-            <p>Test1</p>
-            <!-- NEED TO UPDATE ACTION WHEN READY -->
-            <form action="PLACEHOLDER"> 
-                <p id = "question-prompt">Test question1111111111111 1111111111111111111111111111111 111111111111111111111111 111111111111111111111111 1111111111111111111 11111111111111111111111111111111111111111111:</p>
+            <div class = "intro-collection">
+                <p id = "intro">Welcome to the Nicolas Cage Trivia game. Are you a true fan of the Nickster? Have you seen all his movies? When you're ready to put your Nicolas Cage knowledge to the test press the start button to start the Triva game</p>
+                <input type ="button" id = "start-button" value = "Start game">
+            </div>
+            <form id = "multiplechoice-form"> 
+                <p id = "question-prompt"></p>
                 <label>
                     <input type = "radio" id = "a-radio" class = "radio" name = "options" value = "a">
                     <span id = "a-text"class = "question-label">Option 1</span>

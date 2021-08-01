@@ -28,6 +28,7 @@ h1{
     background-color: yellow;
     grid-row:2/4;
     grid-column: 1/3;
+    
 
 
 }
@@ -64,7 +65,7 @@ label{
     font-size: 2em;
     margin-left: 50px;
     align-items: center;
-    padding: 1.25rem 0;
+    padding: 1.20rem 0;
     color: green;
     cursor: pointer;
     font-family: 'Open Sans', sans-serif;
@@ -81,6 +82,10 @@ label:hover{
     transition: 150ms all ease-in-out;
     /* transform: scale(1.10); */
     font-size: 125%;
+}
+
+#multiplechoice-form{
+    display: none;
 }
 
 
@@ -121,8 +126,20 @@ input:hover{
      background-color:#FFFFFF;
 }
 
+#intro{
+    font-size: 2.5em;
+    font-family: 'Open Sans', sans-serif;
+}
+#intro-container{
+    text-align: center;
+}
+
 #submit-button{
     margin-right: 25px;
+}
+
+#start-button{
+
 }
 
 #question-pic{
@@ -139,6 +156,7 @@ input:hover{
 
 
 }
+
 
 @keyframes float {
     0% { transform: translate(0,  0px); }
