@@ -35,25 +35,47 @@ const questionSetGenerator = () => new Array(
   ['In what movie does Nicolas Cage play a con artist who changes gears to focus on raising his daughter?', 'Con Air', 'Face/Off', 'Adaptation', 'Matchstick Men', dAnswer, 'images/nicocd.png'],
 );
 
-
 const questions = questionSetGenerator();
 let question;
 let correctAnswers = 0;
 let questionCounter = 0;
 
 const answerCheck = (correctAnswer) => {
-  return correctAnswer.checked};
+  correctAnswer.nextElementSibling.style.color = 'green';
+  if (!correctAnswer.checked) {
+    for (let i = 0; i < buttons.length; i++) {
+      if (buttons[i].checked) {
+        buttons[i].nextElementSibling.style.color = 'red';
+      }
+    }
+  }
+  return correctAnswer.checked;
+};
+
+const buttonDisabler = () => {
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].disabled = true;
+  }
+};
+
+const buttonEnabler = () => {
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].disabled = false;
+  }
+};
 
 const finalResults = (correctAnswers) => {
   $('#multiplechoice-form').style.display = 'none';
   const finalScore = (correctAnswers / 10) * 100;
+  $('#finale').classList.add('fade-animation');
   $('#report-card').innerHTML = 'Cage Trivia Report Card:';
   $('#final-report').innerHTML = `You've answered 10 Cage trivia questions.<br>You got ${correctAnswers} questions out of 10 correct.<br>Your final score is: ${finalScore}% . <br>If you scored 10/10, you're a true Cage-a-holic, otherwise level-up your Cage knowledge and play again`;
+  $('#final-report').nextElementSibling.src = 'images/CageAutograph.png';
+  $('.finale');
   questionPic.src = 'images/niccagebook.jpg';
 };
 
 const questionFormatter = (question) => {
-  const buttons = document.querySelectorAll('label input');
   for (let i = 0; i < buttons.length; i++) {
     buttons[i].checked = false;
   }
@@ -96,6 +118,30 @@ const answerGivenChecker = () => {
   return answerGiven;
 };
 
+const defaultFontColorSetter = () => {
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].nextElementSibling.style.color = '#AACCFF';
+  }
+};
+
+const nextQuestionSetup = () => {
+  $('#submit-button').disabled = true;
+  buttonDisabler();
+  setTimeout(() => {
+    question = questionPicker();
+    questionFormatter(question);
+    restartAnimation();
+  }, 1000);
+};
+
+const reenableButtons = () => {
+  setTimeout(() => {
+    defaultFontColorSetter();
+    buttonEnabler();
+    $('#submit-button').disabled = false;
+  }, 1000);
+};
+
 document.addEventListener('DOMContentLoaded', () => {
   $('#start-button').addEventListener('click', () => {
     introGameHider();
@@ -107,21 +153,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
   $('#submit-button').addEventListener('click', () => {
     if (answerGivenChecker()) {
-      confirmedAnswer = answerCheck(question[5]);
-      if (confirmedAnswer) {
+      answerConfirmedCorrect = answerCheck(question[5]);
+      if (answerConfirmedCorrect) {
         correctAnswers += 1;
       }
       questionCounter += 1;
+      nextQuestionSetup();
+      reenableButtons();
       if (questionCounter > 10) {
-        finalResults(correctAnswers);
-      } else {
-        question = questionPicker();
-        questionFormatter(question);
-        restartAnimation();
+        setTimeout(() => {
+          finalResults(correctAnswers);
+        }, 1000);
       }
     } else {
       $('#no-selection-warning').textContent = '*You must selection an option';
     }
-    
   });
 });
