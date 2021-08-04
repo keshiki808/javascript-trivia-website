@@ -30,19 +30,26 @@ const questionSetGenerator = () => new Array(
   ["Which famous Hollywood director is Nicolas Cage's uncle?", 'George Lucas', 'Francis Ford Coppola', 'David Cronenberg', 'Mel Brooks', bAnswer, 'images/vampireskiss.jpg'],
   ["Why did they want to break into Alcatraz in the 90's action flick 'The Rock'?", 'To rescue a captured scientist', 'To rescue the President of The United States', 'To stop a chemical weapon attack', 'To find a hidden treasure', cAnswer, 'images/therock.jpg'],
   ["What movie does Cage say his much meme'd line 'Not the bees!!'?", 'The Fly', 'The Wickerman', 'Snake Eyes', 'The Rock', bAnswer, 'images/bees.png'],
-  ['In what critically acclaimed movie does Nicolas Cage play quirky twin brother screenwriters?', 'Snake Eyes', 'Matchstick Men', '8mm', 'Adaptation', dAnswer, 'images/twins.jpg'],
+  ['In the movie 8mm what was private investigator Nicolas Cage hired to investigate?', 'A snuff film', 'A cheating lover', 'A stolen heirloom', 'A ponzi scheme', aAnswer, 'images/nic8mm.jpg'],
+  ['What sporting event is the focus of the movie Snake Eyes?', 'A basketball game', 'Craps ', 'A football game', 'A boxing match', dAnswer, 'images/snakeeyes.jpg'],
+  ['In what movie does Nicolas Cage play a con artist who changes gears to focus on raising his daughter?', 'Con Air', 'Face/Off', 'Adaptation', 'Matchstick Men', dAnswer, 'images/nicocd.png'],
 );
+
 
 const questions = questionSetGenerator();
 let question;
 let correctAnswers = 0;
 let questionCounter = 0;
 
-const answerCheck = (correctAnswer) => (correctAnswer.checked);
+const answerCheck = (correctAnswer) => {
+  return correctAnswer.checked};
 
 const finalResults = (correctAnswers) => {
-  const finalScore = correctAnswers / 10;
-  alert(finalScore);
+  $('#multiplechoice-form').style.display = 'none';
+  const finalScore = (correctAnswers / 10) * 100;
+  $('#report-card').innerHTML = 'Cage Trivia Report Card:';
+  $('#final-report').innerHTML = `You've answered 10 Cage trivia questions.<br>You got ${correctAnswers} questions out of 10 correct.<br>Your final score is: ${finalScore}% . <br>If you scored 10/10, you're a true Cage-a-holic, otherwise level-up your Cage knowledge and play again`;
+  questionPic.src = 'images/niccagebook.jpg';
 };
 
 const questionFormatter = (question) => {
@@ -113,7 +120,8 @@ document.addEventListener('DOMContentLoaded', () => {
         restartAnimation();
       }
     } else {
-      $('#no-selection-warning').textContent = 'You must selection an option';
+      $('#no-selection-warning').textContent = '*You must selection an option';
     }
+    
   });
 });

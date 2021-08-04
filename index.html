@@ -7,49 +7,50 @@
     <link rel="stylesheet" href="styles.css"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&display=swap" rel="stylesheet">
-    <title>Trivia</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Open+Sans&family=Oswald&display=swap" rel="stylesheet">
+    <title>Nicolas Cage Trivia</title>
 </head>
 <body>
-    <div id = "grid-wrapper">
-    
+    <div id = "grid-wrapper"> 
         <div id = "grid-top-item1">
-            <img src="images/nickcutout.png" alt="Nic Cage Face" id = "cage-face">
-            <h1>Trivia</h1>
-            <p id = "welcome-prompt">Nicolas Cage Trivia</p>
+            <h1>Nicolas Cage Trivia</h1>
+            <img src="images/nickcutout.png" alt="Nic Cage Face" class="cage-face">
+            <img src="images/nickcutout2.png" alt="Nic Cage Face" class="cage-face">
+            <img src="images/nickcutout3.png" alt="Nic Cage Face" class="cage-face">
         </div>
         <div id = "grid-body-item2">
             <div class = "intro-collection">
                 <p id = "intro">Welcome to the Nicolas Cage Trivia game. Are you a true fan of the Nickster? Have you seen all his movies? When you're ready to put your Nicolas Cage knowledge to the test press the start button to start the Trivia game</p>
                 <input type ="button" id = "start-button" value = "Start game">
             </div>
+            <h2 id = "report-card"></h2>
+            <p id = "final-report"></p>
             <form id = "multiplechoice-form"> 
                 <p id = "question-prompt"></p>
                 <label>
                     <input type = "radio" id = "a-radio" class = "radio" name = "options" value = "a">
-                    <span id = "a-text"class = "question-label">Option 1</span>
+                    <span id = "a-text"class = "question-label" >Option 1</span>
                 </label><br>
                 <label>    
                     <input type = "radio" id = "b-radio" class = "radio"name = "options" value = "b">
-                    <span id ="b-text" class = "question-label">Option 2</span>
+                    <span id ="b-text" class = "question-label" >Option 2</span>
                 </label><br>
                 <label>
                     <input type = "radio" id = "c-radio" class = "radio"name = "options" value = "c">
-                    <span id ="c-text" class = "question-label">Option 3</span>
+                    <span id ="c-text" class = "question-label" >Option 3</span>
                 </label><br>
                 <label>
                     <input type = "radio" id = "d-radio" class = "radio"name = "options" value = "d">
-                    <span id ="d-text" class = "question-label">Option 4</span>
+                    <span id ="d-text" class = "question-label" >Option 4</span>
                 </label><br>
                 <div id = "button-container">
                     <input type="button"  id = "submit-button" value="Submit">
                 </div>
-                <!-- <input type="button"  id = "next-button" value="Next Question"> -->
             </form>
             <span id = "no-selection-warning"></span>
         </div>
         <div id = "grid-footer-item3">
-            <p>Test2</p>
         </div>
 
         <div id = "grid-side-item4">
@@ -58,7 +59,6 @@
             </div>
         </div>
     </div>
-
     <script src="trivia.js"></script>
 </body>
 </html>
