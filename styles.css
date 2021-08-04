@@ -131,7 +131,13 @@ input:hover{
 }
 
 #submit-button{
-    margin-right: 25px;
+    text-align: center;
+    padding: 25px 50px;
+}
+
+#button-container{
+   margin-left: 25px;
+   margin-top: 10px;
 }
 
 #start-button{
@@ -183,6 +189,9 @@ input:hover{
     0% {opacity:0;}
     100% {opacity:1;}
   }
+
+
+@media
 
 
 
