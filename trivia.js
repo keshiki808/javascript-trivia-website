@@ -20,16 +20,16 @@ const buttons = document.querySelectorAll('label input');
 const questionSetGenerator = () => new Array(
   ['Which movie did Nicolas Cage win an Academy award for best actor?', 'Con-Air', 'The Rock', 'Leaving Las Vegas', 'Ghost Rider', cAnswer, 'images/academyaward.jpg'],
   ["What was the name of Nicolas Cage's character in the critically acclaimed action movie, Face/Off?", 'Sean Archer', 'Castor Troy', 'Johnny Blaze', 'Dash Jones', bAnswer, 'images/faceoff.jpg'],
-  ["What was the treasure they wanted to steal in the movie 'National Treasure'?", 'The Declaration of Independence', 'The Mona Lisa', 'The Florentine Diamond', 'Nazi Gold', aAnswer, 'images/nationaltreasure.jpg'],
+  ["What was the treasure the protagonists wanted to steal in the movie 'National Treasure'?", 'The Declaration of Independence', 'The Mona Lisa', 'The Florentine Diamond', 'Nazi Gold', aAnswer, 'images/nationaltreasure.jpg'],
   ['Which of the following Nicolas Cage movies was directed by legendary director David Lynch?', 'Wild at Heart', "Vampire's Kiss", 'Raising Arizona', 'Con-Air', aAnswer, 'images/cagelynch.jpg'],
   ["The was the goal of the big scheme in the movie 'Gone in Sixty Seconds'?", 'Stealing a series of cars', 'Completing a series of bank heists', 'Stealing a treasure of gold bars', 'Stealing exotic paintings', aAnswer, 'images/60seconds.jpg'],
   ['How many movies has Nicolas Cage been in as of 2021?', 'Between 50-75', 'Between 76-100', 'Between 101 and 125', 'Over 126', cAnswer, 'images/smilecage.png'],
-  ['Which bizarre thing has Nicolas Cage NOT purchased?', 'A World War 2 era tank', 'A Tyrannosaurus skull', 'A haunted house', 'an octopus', aAnswer, 'images/cagethinking.jpg'],
+  ['Which bizarre thing has Nicolas Cage NOT purchased?', 'A World War II era tank', 'A Tyrannosaurus skull', 'A haunted house', 'An octopus', aAnswer, 'images/cagethinking.jpg'],
   ["Which famous Hollywood director is Nicolas Cage's uncle?", 'George Lucas', 'Francis Ford Coppola', 'David Cronenberg', 'Mel Brooks', bAnswer, 'images/vampireskiss.jpg'],
-  ["Why did they want to break into Alcatraz in the 90's action flick 'The Rock'?", 'To rescue a captured scientist', 'To rescue the President of The United States', 'To stop a chemical weapon attack', 'To find a hidden treasure', cAnswer, 'images/therock.jpg'],
-  ["What movie does Cage say his much meme'd line 'Not the bees!!'?", 'The Fly', 'The Wickerman', 'Snake Eyes', 'The Rock', bAnswer, 'images/bees.png'],
-  ['In the movie 8mm what was private investigator Nicolas Cage hired to investigate?', 'A snuff film', 'A cheating lover', 'A stolen heirloom', 'A ponzi scheme', aAnswer, 'images/nic8mm.jpg'],
-  ['What sporting event is the focus of the movie Snake Eyes?', 'A basketball game', 'Craps ', 'A football game', 'A boxing match', dAnswer, 'images/snakeeyes.jpg'],
+  ["Why did the protagonists want to break into Alcatraz in the 90's action flick 'The Rock'?", 'To rescue a captured scientist', 'To rescue the President of The United States', 'To stop a chemical weapon attack', 'To find a hidden treasure', cAnswer, 'images/therock.jpg'],
+  ["In what movie does Cage say his much meme'd line 'Not the bees!!'?", 'The Fly', 'The Wickerman', 'Snake Eyes', 'The Rock', bAnswer, 'images/bees.png'],
+  ["In the movie 8mm what was Nicolas Cage's private investigator character hired to investigate?", 'A snuff film', 'A cheating lover', 'A stolen heirloom', 'A ponzi scheme', aAnswer, 'images/nic8mm.jpg'],
+  ['What sporting event is the central focus of the movie Snake Eyes?', 'A basketball game', 'Craps ', 'A football game', 'A boxing match', dAnswer, 'images/snakeeyes.jpg'],
   ['In what movie does Nicolas Cage play a con artist who changes gears to focus on raising his daughter?', 'Con Air', 'Face/Off', 'Adaptation', 'Matchstick Men', dAnswer, 'images/nicocd.png'],
 );
 
