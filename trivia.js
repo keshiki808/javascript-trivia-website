@@ -14,9 +14,7 @@ const dChoice = $('#d-text');
 const dAnswer = $('#d-radio');
 
 const questionPic = $('#question-pic');
-
 const questionPrompt = $('#question-prompt');
-
 const buttons = document.querySelectorAll('label input');
 
 const questionSetGenerator = () => new Array(
@@ -69,7 +67,7 @@ const finalResults = (correctAnswers) => {
   const finalScore = (correctAnswers / 10) * 100;
   $('#finale').classList.add('fade-animation');
   $('#report-card').innerHTML = 'Cage Trivia Report Card:';
-  $('#final-report').innerHTML = `You've answered 10 Cage trivia questions.<br>You got ${correctAnswers} questions out of 10 correct.<br>Your final score is: ${finalScore}% . <br>If you scored 10/10, you're a true Cage-a-holic, otherwise level-up your Cage knowledge and play again`;
+  $('#final-report').innerHTML = `You got ${correctAnswers} questions out of 10 correct.<br>Your final score is: ${finalScore}% . <br>If you scored 10/10, you're a true Cage-a-holic, otherwise level-up your Cage knowledge and play again!`;
   $('#final-report').nextElementSibling.src = 'images/CageAutograph.png';
   $('.finale');
   questionPic.src = 'images/niccagebook.jpg';
