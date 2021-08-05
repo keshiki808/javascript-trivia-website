@@ -37,6 +37,7 @@ p,span,h2{
     color: #000000;
     background-color: #FFFFFF;
     border-radius: 25px;
+    padding-left: 10px;
 }
 
 #no-selection-warning{
