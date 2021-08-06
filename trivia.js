@@ -19,10 +19,10 @@ const buttons = document.querySelectorAll('label input');
 
 //Array of questions and answers
 const questionSetGenerator = () => new Array(
-  ['Which movie did Nicolas Cage win an Academy award for best actor?', 'Con-Air', 'The Rock', 'Leaving Las Vegas', 'Ghost Rider', cAnswer, 'images/academyaward.jpg'],
+  ['Which movie did Nicolas Cage win an Academy award for best actor?', 'Con Air', 'The Rock', 'Leaving Las Vegas', 'Ghost Rider', cAnswer, 'images/academyaward.jpg'],
   ["What was the name of Nicolas Cage's character in the critically acclaimed action movie, Face/Off?", 'Sean Archer', 'Castor Troy', 'Johnny Blaze', 'Dash Jones', bAnswer, 'images/faceoff.jpg'],
   ["What was the treasure the protagonists wanted to steal in the movie 'National Treasure'?", 'The Declaration of Independence', 'The Mona Lisa', 'The Florentine Diamond', 'Nazi Gold', aAnswer, 'images/nationaltreasure.jpg'],
-  ['Which of the following Nicolas Cage movies was directed by legendary director David Lynch?', 'Wild at Heart', "Vampire's Kiss", 'Raising Arizona', 'Con-Air', aAnswer, 'images/cagelynch.jpg'],
+  ['Which of the following Nicolas Cage movies was directed by legendary director David Lynch?', 'Wild at Heart', "Vampire's Kiss", 'Raising Arizona', 'Con Air', aAnswer, 'images/cagelynch.jpg'],
   ["The was the goal of the big scheme in the movie 'Gone in Sixty Seconds'?", 'Stealing a series of cars', 'Completing a series of bank heists', 'Stealing a treasure of gold bars', 'Stealing exotic paintings', aAnswer, 'images/60seconds.jpg'],
   ['How many movies has Nicolas Cage been in as of 2021?', 'Between 50-75', 'Between 76-100', 'Between 101 and 125', 'Over 126', cAnswer, 'images/smilecage.png'],
   ['Which bizarre thing has Nicolas Cage NOT purchased?', 'A World War II era tank', 'A Tyrannosaurus skull', 'A haunted house', 'An octopus', aAnswer, 'images/cagethinking.jpg'],
